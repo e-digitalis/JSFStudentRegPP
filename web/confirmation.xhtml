@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Registration confirmation</title>
+        <h:outputStylesheet library="css" name="myStyle.css"/>
+        <h:outputStylesheet library="js" name="mainJs.js"/>
+    </h:head>
+    <h:body>
+        <h1>Registration successful!</h1>
+
+        <h2>You are now registered #{studentBean.firstName}!</h2><br/><br/>
+
+        <h3>Here is a copy of the data you entered into the registration form:</h3>
+        <p>First name: #{studentBean.age} <br/>
+            Last name: #{studentBean.lastName}<br/>
+            Age: #{studentBean.age}<br/><br/></p>
+
+        <h3>You registered into the following courses:</h3>
+        #{studentBean.subject.subject1}<br/>
+        #{studentBean.subject.subject2}<br/>
+        #{studentBean.subject.subject3}<br/>
+        #{studentBean.subject.subject4}<br/>
+        <p>
+
+        </p>
+
+
+
+    </h:body>
+</html>
+
