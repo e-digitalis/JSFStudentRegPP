@@ -20,6 +20,7 @@ public class StudentBean {
     private String firstName;
     private String lastName;
     private String age;
+    private String experienceLevel;
     
     @Inject
     private Subject subject;
@@ -54,6 +55,14 @@ public class StudentBean {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public String getExperienceLevel() {
+        return experienceLevel;
+    }
+
+    public void setExperienceLevel(String experienceLevel) {
+        this.experienceLevel = experienceLevel;
     }
 
  
