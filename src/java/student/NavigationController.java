@@ -20,7 +20,6 @@ public class NavigationController {
         String navAction = "confirmation";
         return navAction;
     }
-
     
     /**
      * Creates a new instance of NavigationController
