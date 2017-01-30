@@ -1,2 +1,2 @@
 # JSFStudentRegPP
-JSF project
+JSF project - student registration form
