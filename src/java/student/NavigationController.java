@@ -16,8 +16,23 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class NavigationController {
 
+    private String  location;
+    public String getLocation(){
+        return location;
+    }
+    
+    public void setLocation(String location){
+        this.location = location;
+    }
+    
+    
         public String navigate() {
-        String navAction = "confirmation";
+            String navAction = null;
+        if (this.location.equals("Stockholm")){
+            navAction = "confirmation";
+            } else {
+            navAction = "confirmation2";
+        }
         return navAction;
     }
     

@@ -26,6 +26,12 @@ h3{
 
 body{
     font-family: sans-serif;
+    background-color: #636363;
+     color: #e1f4f7;
+}
+
+p {
+    font-family: sans-serif;
     background-color: #282727;
      color: #e1f4f7;
 }

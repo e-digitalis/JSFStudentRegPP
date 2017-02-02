@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Studen Registration Form</title>
+        <title>Student Registration Form</title>
         <h:outputStylesheet library="css" name="myStyle.css"/>
         <h:outputStylesheet library="js" name="mainJs.js"/>
     </h:head>
@@ -12,33 +14,44 @@
 
             <h1>Welcome to the student registration form here on Pink Programming.</h1>
 
-            <h:panelGrid columns="2">
-                <h:outputLabel for="firstName" value="First Name"/>
-                <h:inputText id="firstName" value='#{studentBean.firstName}'/>
+            <p:panelGrid columns="2">
+                <p:outputLabel for="firstName" value="First Name"/>
+                <p:inputText id="firstName" value='#{studentBean.firstName}'/>
 
-                <h:outputLabel for="lastName" value="Last Name"/>
-                <h:inputText id="lastName" value='#{studentBean.lastName}'/>
+                <p:outputLabel for="lastName" value="Last Name"/>
+                <p:inputText id="lastName" value='#{studentBean.lastName}'/>
 
-                <h:outputLabel for="age" value="Age"/>
-                <h:inputText id="age" value='#{studentBean.age}'/>
+                <p:outputLabel for="location" value="Campus"/>
+                <p:selectOneMenu id="location" value='#{studentBean.navigationController.location}' required="true">
 
-                <h:outputLabel for="subject1" value="Subject 1"/>
-                <h:inputText id="subject1" value='#{studentBean.subject.subject1}'/>
+                    <f:selectItem itemLabel="ort" itemValue=""/>
+                    <f:selectItem itemLabel="Stockholm" itemValue="Stockholm"/>
+                    <f:selectItem itemLabel="Göteborg" itemValue="Göteborg"/>
 
-                <h:outputLabel for="subject2" value="Subject 2"/>
-                <h:inputText id="subject2" value='#{studentBean.subject.subject2}'/>
-                
-                <h:outputLabel for="subject3" value="Subject 3"/>
-                <h:inputText id="subject3" value='#{studentBean.subject.subject3}'/>
-                
-                <h:outputLabel for="subject4" value="Subject 4"/>
-                <h:inputText id="subject4" value='#{studentBean.subject.subject4}'/>
-                
+                </p:selectOneMenu>
+
+                <p:outputLabel for="age" value="Age"/>
+                <p:inputText id="age" value='#{studentBean.age}'/>
+
+                <p:outputLabel for="subject1" value="Subject 1"/>
+                <p:inputText id="subject1" value='#{studentBean.subject.subject1}'/>
+
+                <p:outputLabel for="subject2" value="Subject 2"/>
+                <p:inputText id="subject2" value='#{studentBean.subject.subject2}'/>
+
+                <p:outputLabel for="subject3" value="Subject 3"/>
+                <p:inputText id="subject3" value='#{studentBean.subject.subject3}'/>
+
+                <p:outputLabel for="subject4" value="Subject 4"/>
+                <p:inputText id="subject4" value='#{studentBean.subject.subject4}'/>
+
                 <h:panelGroup/>
-                <h:commandButton value= "Submit" action= "#{navigationController.navigate()}"></h:commandButton>
-            </h:panelGrid>
+                <p:commandButton value= "Submit" action= "#{navigationController.navigate()}"></p:commandButton>
+            </p:panelGrid>
 
         </h:form>
+        <br />
+
     </h:body>
 </html>
 

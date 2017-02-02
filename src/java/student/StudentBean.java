@@ -20,17 +20,30 @@ public class StudentBean {
     private String firstName;
     private String lastName;
     private String age;
+    private String location;
     private String experienceLevel;
     
     @Inject
     private Subject subject;
-
+    
+    @Inject
+    private NavigationController navigationController;
+    
+    
     public Subject getSubject() {
         return subject;
     }
 
     public void setSubject(Subject subject) {
         this.subject = subject;
+    }
+
+    public NavigationController getNavigationController() {
+        return navigationController;
+    }
+
+    public void setNavigationController(NavigationController navigationController) {
+        this.navigationController = navigationController;
     }
 
     public String getFirstName() {
@@ -63,6 +76,14 @@ public class StudentBean {
 
     public void setExperienceLevel(String experienceLevel) {
         this.experienceLevel = experienceLevel;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
  
